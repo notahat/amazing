@@ -10,7 +10,7 @@ class Generator
 end
 
 size = 20
-locations = Grid.new(size)
+locations = Grid.new(size).locations
 maze = Maze.new(locations)
 
 Generator.new.generate(maze)
