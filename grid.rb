@@ -1,4 +1,5 @@
 require 'location'
+require 'set'
 
 class Grid
   def initialize(size)
@@ -6,7 +7,7 @@ class Grid
   end
 
   def locations
-    [].tap do |locations|
+    Set.new.tap do |locations|
       (1..@size).each do |x|
         (1..@size).each do |y|
           locations << Location.new(x, y)

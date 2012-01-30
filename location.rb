@@ -1,3 +1,5 @@
+require 'set'
+
 class Location < Struct.new(:x, :y)
   def up
     Location.new(x, y-1)
@@ -16,6 +18,6 @@ class Location < Struct.new(:x, :y)
   end
 
   def neighbours
-    [up, down, left, right]
+    Set.new([up, down, left, right])
   end
 end
